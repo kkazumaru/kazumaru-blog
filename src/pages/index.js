@@ -3,12 +3,10 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import PostLink from "../components/post-link"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <SEO title="カズマルブログ" description="Gatsbyを使って作ったブログです" />
       <Hero />
       {data.allContentfulPost.edges.map(edge =>
         <PostLink key={edge.node.slug} post={edge.node} />
@@ -19,7 +17,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
     query allContentfulPost {
-      allContentfulPost {
+      allContentfulPost(filter: {node_locale: {eq: "en-US"}}) {
         edges {
           node {
             title

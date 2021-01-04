@@ -11,7 +11,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "カズマルブログ",
-    description: "Gatsbyで作成したブログサイトです。",
+    description: "メモレベルでアウトプットする個人ブログサイトです",
     author: "カズマル"
   },
   plugins: [
