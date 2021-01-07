@@ -17,7 +17,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
     query allContentfulPost {
-      allContentfulPost(filter: {node_locale: {eq: "en-US"}}) {
+      allContentfulPost(filter: {node_locale: {eq: "ja-JP"}}) {
         edges {
           node {
             title
